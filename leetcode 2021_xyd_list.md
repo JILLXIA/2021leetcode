@@ -12,6 +12,10 @@ java里面的clone()函数默认是浅拷贝，开辟一个副本对象，但是
 
 改变原来对象的值，副本对象不会被修改。
 
+![image-20210406133138796](/Users/xiayudi/Library/Application Support/typora-user-images/image-20210406133138796.png)
+
+如果要重写clone方法，必须要实现Cloneable的接口
+
 
 
 ## 2. 链表
