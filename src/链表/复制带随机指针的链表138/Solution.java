@@ -1,5 +1,6 @@
 package 链表.复制带随机指针的链表138;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -26,21 +27,31 @@ import java.util.HashSet;
  * 如果不指向任何节点，则为null。
  * 你的代码 只 接受原链表的头节点 head 作为传入参数。
  */
+
+/**
+ * 因为有两个指针，可以把链表想象成一个图，进行深度遍历
+ */
 public class Solution {
-//TODO 太复杂了，明天写
+    HashMap<Node,Node> map = new HashMap<>();
+    //key是原来的节点，value是现在的节点
     public Node copyRandomList(Node head) {
-        Node root = new Node(head.val);
-        Node newPos = root;
-        Node oldPos = head;
-        HashSet<Node> set = new HashSet<>();
-        set.add(newPos);
-        while(oldPos!=null){
-            if(set.contains())
-            newPos.next = new Node(oldPos.next.val);
-            newPos.random = new Node(oldPos.random.val);
-            set.add(newPos.next);
-            set.add(newPos.random);
+        if(head==null){
+            return null;
         }
+        Node result;
+        if(!map.containsKey(head)) {
+            //如果没有被复制，就创建一个新节点
+            result = new Node(head.val);
+            map.put(head, result);
+        }else{
+            //如果已经复制过了，返回value
+            result = map.get(head);
+            return result;//直接返回，不要在递归找next和random了
+        }
+        result.next = copyRandomList(head.next);//先遍历完next再开始遍历random 相当于DFS
+        result.random = copyRandomList(head.random);
+
+        return result;
     }
 }
 
