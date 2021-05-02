@@ -10,6 +10,8 @@ package 位运算.编码验证393;
 
 /**
  * 难点：不知道怎么简洁地写代码
+ *
+ * 这题没啥意思 不写了
  */
 public class Solution {
     public boolean validUtf8(int[] data) {
