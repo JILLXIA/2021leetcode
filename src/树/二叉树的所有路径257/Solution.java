@@ -34,7 +34,9 @@ public class Solution {
         }
         path.append(root.val+"->");
         if(root.left!=null){
-            dfs(root.left,path.toString());
+            dfs(root.left,path.toString());//path的作用域一定要在函数里面，
+            // 传s+"->"不会有问题，是因为当前还输作用域的s没有变
+
         }
         if(root.right!=null) {
             dfs(root.right, path.toString());
