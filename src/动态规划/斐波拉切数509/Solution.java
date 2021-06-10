@@ -14,6 +14,11 @@ package 动态规划.斐波拉切数509;
  * 可以使用动态规划或者备忘录的递归函数
  */
 public class Solution {
+    /**
+     * 或者只记录前面两个数，可以减少空间复杂度
+     * @param n
+     * @return
+     */
     public int fib(int n) {
         if(n==0||n==1){
             return n;

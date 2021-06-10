@@ -38,6 +38,26 @@ java里面的clone()函数默认是浅拷贝，开辟一个副本对象，但是
 
 ## 9. 动态规划
 
+求最优值
+
+核心是穷举
+
+1. 重叠子问题
+2. 状态转移方程（最关键）
+3. 最优子结构
+
+![image-20210610171949950](/Users/xiayudi/Library/Application Support/typora-user-images/image-20210610171949950.png)
+
+base case->穷举状态-》状态转移
+
+
+
+
+
+
+
+
+
 ## 10. 排序
 
 ## 11. 回溯
