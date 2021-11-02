@@ -39,5 +39,6 @@ public class MedianFinder {
 
     public double findMedian() {
 
+        return 0.0;
     }
 }
