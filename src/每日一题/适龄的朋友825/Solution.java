@@ -33,7 +33,7 @@ public class Solution {
         }
 
         int ans = 0;
-        for(int i = 0;i<count.length;i++){
+        for(int i = 15;i<count.length;i++){
             if(count[i]>0) {
                 int y = (int) (i * 0.5 + 7);
                 ans += (pre[i] - pre[y] - 1) * count[i];
