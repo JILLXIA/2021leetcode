@@ -118,3 +118,18 @@ num = a[n]*26^0 + a[n-1]*26^1 + a[n-2]*26^2 + ... + a[1]*26^(n-1) + a[0]*26^n
 337 长度为2的数组的动态规划解法
 518 待优化为1维数组
 
+## TreeSet
+TreeSet插入是无序的，但是可以后期自己排序
+```
+TreeSet<student> ts=new TreeSet<student>(new Comparator<student>() {
+
+        @Override
+        public int compare(student o1, student o2) {
+            int num=o1.age-o2.age;
+            int num2=num==0?o1.number-o2.number:num;
+            return num2;
+        }
+    });
+```
+通过匿名内部类重写compare方法
+遍历的时候取出来就是有序的了
