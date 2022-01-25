@@ -133,3 +133,9 @@ TreeSet<student> ts=new TreeSet<student>(new Comparator<student>() {
 ```
 通过匿名内部类重写compare方法
 遍历的时候取出来就是有序的了
+
+
+
+# java 序列化
+
+https://juejin.cn/post/6844903848167866375
