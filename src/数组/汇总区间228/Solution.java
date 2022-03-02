@@ -1,6 +1,5 @@
 package 数组.汇总区间228;
 
-import sun.applet.Main;
 
 import java.util.ArrayList;
 import java.util.Deque;
