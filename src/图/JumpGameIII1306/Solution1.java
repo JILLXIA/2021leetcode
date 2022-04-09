@@ -1,0 +1,14 @@
+package 图.JumpGameIII1306;
+// check whether the visited flag can be replace
+public class Solution1 {
+    public boolean canReach(int[] arr, int start) {
+        if(start < 0 || start >= arr.length || arr[start] < 0){
+            return false;
+        }
+        if(arr[start] == 0){
+            return true;
+        }
+        arr[start] = -arr[start];
+        return canReach(arr,start + arr[start]) || canReach(arr,start - arr[start]);
+    }
+}
