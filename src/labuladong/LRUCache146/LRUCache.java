@@ -1,6 +1,7 @@
 package labuladong.LRUCache146;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
