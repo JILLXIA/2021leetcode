@@ -23,8 +23,8 @@ public class Solution {
 	}
 
 	// res[0] 以root为根的二叉树是否为BST 1是0不是
-	// res[1] 以root为BST根节点左子树的最大值
-	// res[2] 以root为BST根节点右子树的最小值
+	// res[1] 以root为BST根节点所有节点最大值
+	// res[2] 以root为BST根节点所有节点最小值
 	// res[3] 以root为根节点的子树和
 	public int[] maxSum(TreeNode root){
 		if(root==null){
