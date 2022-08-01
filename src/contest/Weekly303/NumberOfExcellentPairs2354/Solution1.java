@@ -1,4 +1,4 @@
-package contest.NumberOfExcellentPairs2354;
+package contest.Weekly303.NumberOfExcellentPairs2354;
 
 import java.util.HashSet;
 

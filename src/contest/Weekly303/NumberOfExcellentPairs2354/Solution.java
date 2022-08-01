@@ -1,8 +1,6 @@
-package contest.NumberOfExcellentPairs2354;
+package contest.Weekly303.NumberOfExcellentPairs2354;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 
 public class Solution {

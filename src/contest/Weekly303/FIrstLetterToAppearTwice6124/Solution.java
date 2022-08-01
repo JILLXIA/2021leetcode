@@ -1,4 +1,4 @@
-package contest.FIrstLetterToAppearTwice6124;
+package contest.Weekly303.FIrstLetterToAppearTwice6124;
 
 public class Solution {
 	public char repeatedCharacter(String s) {

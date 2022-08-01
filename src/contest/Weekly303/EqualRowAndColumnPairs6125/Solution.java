@@ -1,4 +1,4 @@
-package contest.EqualRowAndColumnPairs6125;
+package contest.Weekly303.EqualRowAndColumnPairs6125;
 
 import java.util.ArrayList;
 import java.util.HashMap;
