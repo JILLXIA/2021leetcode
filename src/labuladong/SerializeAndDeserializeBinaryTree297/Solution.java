@@ -1,6 +1,5 @@
 package labuladong.SerializeAndDeserializeBinaryTree297;
 
-import javafx.util.Pair;
 import 每日一题.TreeNode;
 
 import java.util.Deque;
