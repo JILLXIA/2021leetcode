@@ -1,4 +1,4 @@
-package contest.BiWeekly85.TimeNeededToRearrangeABinaryString;
+package contest.BiWeekly85.ShiftingLettersII;
 
 public class Solution1 {
 	public String shiftingLetters(String s, int[][] shifts) {
