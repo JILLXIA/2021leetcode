@@ -2,7 +2,7 @@ package OA.Amazon.SumOfSubarrayRanges2104;
 
 import java.util.Deque;
 import java.util.LinkedList;
-
+// shipment parcels
 public class Solution {
     public long subArrayRanges(int[] nums) {
         int[] nextGreater = new int[nums.length];

@@ -15,16 +15,19 @@ import java.util.LinkedList;
  * A subarray is a contiguous non-empty sequence of elements within an array.
  */
 public class Solution {
+    // bug de 不出来了
+    // 换一种解法
     public int totalStrength(int[] strength) {
         long[] preSum = new long[strength.length+1];
+        long mod = (long) (1e9 + 7);
         for(int i = 1;i<preSum.length;i++){
-            preSum[i] = (preSum[i-1] + (long)strength[i-1])%100000007;
+            preSum[i] = (preSum[i-1] + (long)strength[i-1])%mod;
         }
 
-        long[] preSumSum = new long[preSum.length];
-        preSumSum[0] = preSum[0];
-        for(int i = 1;i<preSumSum.length;i++){
-            preSumSum[i] = (preSumSum[i-1] + (long) strength[i-1] * i)%100000007;
+        long[] preSum2 = new long[preSum.length];
+        preSum2[0] = 0;
+        for(int i = 1;i<preSum2.length;i++){
+            preSum2[i] = (preSum2[i-1] + (long) strength[i-1] * i)%mod;
         }
 
 
@@ -52,10 +55,10 @@ public class Solution {
             int b = nextSmaller[i-1];
             int x = i-a;
             int y = b-i;
-            long left = preSumSum[i-1] - preSumSum[a] - (preSum[i-1] - preSum[a])*a;
-            long right = (preSum[b-1] - preSum[i])*b - (preSumSum[b-1] - preSumSum[i]);
+            long left = preSum2[i-1] - preSum2[a+1] - (preSum[i-1] - preSum[a+1])*a;
+            long right = (preSum[b-1] - preSum[i])*b - (preSum2[b-1] - preSum2[i]);
             long mid = (long) strength[i - 1] *x *y;
-            result += (left + right + mid) * strength[i-1] % 100000007;
+            result += (left + right + mid) * strength[i-1] % mod;
         }
         return (int) result;
     }

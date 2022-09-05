@@ -1,6 +1,8 @@
 package OA.Amazon.minNetStock;
 
 public class Solution {
+    // find earliest month
+    // preSum 需要定义为long
     public int minNetStock(int[] arr){
         int[] preSum = new int[arr.length];
         preSum[0] = arr[0];
