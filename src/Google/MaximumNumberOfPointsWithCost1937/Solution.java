@@ -18,6 +18,7 @@ public class Solution {
             dp[i] = (long)points[0][i];
         }
 
+        // 本质上是找rolling max
         for(int i = 1;i < n;i++){
             long[] tmpDp = new long[m];
             long rollMax = -1000000;
