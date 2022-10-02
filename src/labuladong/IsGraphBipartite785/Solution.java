@@ -14,8 +14,11 @@ package labuladong.IsGraphBipartite785;
 public class Solution {
 	boolean result = true;
 	public boolean isBipartite(int[][] graph) {
+		// set up a int array to notify the color of every node;
+		// 1: heels; -1: babyfaces; 0: have not been visited
 		int[] isVisited = new int[graph.length];
 		for(int i = 0;i< graph.length;i++){
+			// use the Adjacency Matrix to represent the graph
 			if(isVisited[i]==0){
 				dfs(graph, isVisited,1,i);
 			}
@@ -24,7 +27,8 @@ public class Solution {
 	}
 	public void dfs(int[][] graph, int[] isVisited, int flag, int index){
 		if(isVisited[index]==-flag){
-			// 已经被赋值过，但是不是当前的flag
+			// the node has been assigned, but is not the current flag.
+			// means we the graph can not be bipartite.
 			result = false;
 			return;
 		}
@@ -35,7 +39,7 @@ public class Solution {
 
 		isVisited[index] = flag;
 		for(int i:graph[index]){
-			dfs(graph, isVisited, -flag, i);
+			dfs(graph, isVisited, -flag, i); // The value of flag is modified when dfs traverses to the next node.
 		}
 	}
 	public static void main(String[] args){
