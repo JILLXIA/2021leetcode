@@ -3,8 +3,14 @@ package labuladong.LongestIncreasingSubsequence300;
 public class Solution1 {
 	// patience sorting
 	public int lengthOfLIS(int[] nums) {
-		// 1. We need to work through the cards from left to right as we go through the deck, eventually dividing the cards into piles
-		// 2. He can only press the smaller card into the bigger card; If the number of current cards is large and there is no pile to place, then create a new pile and put the card in it. If the current card has more than one pile to choose from, then choose the leftmost pile to place.
+		// 1. We need to work through the cards from left to right as we go through the deck,
+		// eventually dividing the cards into piles
+		// 2. He can only press the smaller card into the bigger card;
+		// If the number of current cards is large and there is no pile to place,
+		// then create a new pile and put the card in it.
+
+		// If the current card has more than one pile to choose from,
+		// then choose the leftmost pile to place.
 		// 3. The final pile of cards is the maximum increasing subsequence length.
 		int[] top = new int[nums.length];
 		int piles = 0;
