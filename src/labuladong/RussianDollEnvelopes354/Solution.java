@@ -30,7 +30,7 @@ public class Solution {
 		}
 		return findLongestSubString(height);
 	}
-
+// longest substring问题是严格递增的，所以需要找leftmost， 如果相等也可以，那么应该找rightmost+1
 	public int findLongestSubString(int[] arr){
 		int[] top = new int[arr.length];
 		int piles = 0;
