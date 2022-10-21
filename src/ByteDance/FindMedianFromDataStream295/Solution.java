@@ -36,7 +36,6 @@ public class Solution {
             maxHeap.add(tmp);
         }
         calculateMedian();
-
     }
 
     public double findMedian() {
