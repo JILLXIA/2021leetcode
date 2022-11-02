@@ -73,7 +73,7 @@ public class Solution {
 	}
 	public static void main(String[] args){
 		Solution s = new Solution();
-		System.out.println(s.calculate("(3)+1"));
+		System.out.println(s.calculate("2*1"));
 	}
 }
 // "(3-(5-(8)-(2+(9-(0-(8-(2))))-(4))-(4)))"
