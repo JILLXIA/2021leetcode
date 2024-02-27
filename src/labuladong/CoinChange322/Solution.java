@@ -13,6 +13,8 @@ import java.util.HashMap;
  *
  * You may assume that you have an infinite number of each kind of coin.
  */
+
+// Time Limit Exceeded
 public class Solution {
 	public int coinChange(int[] coins, int amount) {
 		if(amount==0){
